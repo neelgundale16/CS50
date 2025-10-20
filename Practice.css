@@ -1,0 +1,63 @@
+tr,td,th  {
+    border: 1px solid black;
+    text-align: center;
+    border-collapse : collapse;
+    text-align: center;
+    padding:20px;
+}
+
+table {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    border-collapse : collapse;
+    background-color: lightgreen;
+    float:left;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+#CSS, #CSS1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    border: 3px solid black;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    margin: 20px 50px 20px 0;  
+    box-shadow: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    transition: all 7s ease-in-out;
+    float: left;             
+    vertical-align: top; 
+    box-shadow: 5px 10px 0 rgba(0,0,0,0.5);
+    float:none;
+}
+
+#CSS {
+    background-color: lightblue;
+    color: darkblue;
+    text-shadow: 2px 2px lightgrey;
+}
+
+#CSS1 {
+    background-color: lightcoral;
+    color: darkred;
+    text-shadow: 2px 2px lightsalmon;
+}
+
+ul > li {
+    color:darkred
+}
+
+a[href="https://www.google.com"] {
+    color:limegreen
+}
+
+.layout {
+
+    display:flex;
+    align-items: center;
+    gap:40px;
+}
