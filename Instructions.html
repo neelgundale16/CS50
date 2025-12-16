@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title> Django Instructions</title>
+</head>
+
+<body>
+    <h1>Django Instructions</h1>
+    <ol>
+        <li>Install Python and Django on your system.</li>
+        <li>Create a new Django project using the command: <code>django-admin startproject projectname</code></li>
+        <li>Navigate to the project directory: <code>cd projectname</code></li>
+        <li>Create a new Django app using the command: <code>python manage.py startapp appname</code></li>
+        <li>Add the app to your project's settings.py file.</li>
+        <li>Add the app to your project's urls.py file using <code>path('appname/', include('appname.urls')),</code></li>
+        <li>Create a <code>urls.py</code> file in your app directory and define your URL patterns.</li>
+        <li>Create views in <code>appname/views.py</code> to handle requests and return responses.</li>
+        <li>Create HTML templates in a <code>templates</code> directory within your app for rendering views.</li>
+        <li>Define your models in <code>appname/models.py</code>.</li>
+        <li>Run migrations to create database tables: <code>python manage.py makemigrations</code> and <code>python manage.py migrate</code></li>
+        <li>Create a superuser to access the admin panel: <code>python manage.py createsuperuser</code></li>
+        <li>Run the development server: <code>python manage.py runserver</code></li>
+        <li>Access your application at <a href="http://localhost:8000">http://localhost:8000</a></li>
+    </ol>
+</body>
+</html>
