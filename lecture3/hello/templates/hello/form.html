@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <title> Forms Page </title>
+    <link rel="stylesheet" href="form.css">
+    <style>
+        h2{
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body style="background-color:darkseagreen; text-align:center;" >
+    <h2>Form</h2> To be filled in all CAPS <br><br>
+    <form>
+        <input type="text" placeholder="Full Name" name="name"> 
+        <br><br>
+        <input type="email" placeholder="Email" name="email">
+        <br><br>
+        <input type="password" placeholder="Password" name="password">
+        <br><br>
+        <input type="tel" placeholder="Phone Number" name="phone">
+        <br><br>
+        <textarea placeholder="Address" name="address"></textarea>
+        <br> <br>
+         
+        <div>
+            Choose a colour : 
+            <input name="color" type="radio" value="red"> Red
+            <input name="color" type="radio" value="blue"> Blue    
+            <input name="color" type="radio" value="green"> Green
+            <input name="color" type="radio" value="yellow"> Yellow
+            <input name="color" type="radio" value="other"> Other
+        </div>
+        <br> 
+ <div>
+        Preferred Cities(choose any 2) : 
+        <input type="checkbox" name="Mumbai">Mumbai
+        <input type="checkbox" name="Delhi">Delhi
+        <input type="checkbox" name="Bangalore">Bangalore
+        <input type="checkbox" name="Chennai">Chennai
+        <input type="checkbox" name="Kolkata">Kolkata
+        </div> 
+        <br>
+        <div> 
+            <input name="country" list="countries" placeholder="Country of Residence">
+            <datalist id="countries">
+                <option value="India">
+                <option value="USA">
+                <option value="UK">
+                <option value="Canada">
+                <option value="Australia">
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>    
+</html>
