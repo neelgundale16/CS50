@@ -4,19 +4,31 @@
     <title>Hello</title>
     <script> 
         function hello() {
-            if (document.querySelector("h1").innerHTML==="Hello, World!") {
+            let heading = document.querySelector('h3');    
+             
+                if (document.querySelector("h1").innerHTML==="Hello, World!" && document.body.style.backgroundColor==="pink") {
                 document.querySelector("h1").innerHTML="Goodbye!";
+                document.body.style.backgroundColor="lightblue";
             }
             else   {
                 document.querySelector("h1").innerHTML="Hello, World!";
+                document.body.style.backgroundColor="pink";
+            }
+
+            if(heading.innerHTML === "Welcome to CS50!") {
+                heading.innerHTML = "Have a nice day!";
+            }
+            else {
+                heading.innerHTML = "Welcome to CS50!";
             }
         }
-       
+            
     </script>
 </head>
 
-<body>
+<body style="background-color: pink;">
     <h1>Hello, World!</h1>
+    <h3>Welcome to CS50!</h3>
     <button onclick="hello()">Click Here</button>
 </body>
 
