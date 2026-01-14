@@ -7,13 +7,30 @@
                 display: none;
             }
         </style>
+        <script>
+            function showPage(page) {
+                document.querySelectorAll('div').forEach(div => {
+                    div.style.display = 'none'; //Hide all pages
+                });
+                document.querySelector(`#${page}`).style.display = 'block';
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('button').forEach(button => {
+                    button.onclick = function() {
+                        showPage(this.dataset.page);
+                    }
+                }); 
+            });
+        </script>
     </head>
 
     <body>
-        <button onclick="showPage('page1')">Page 1</button>
-        <button onclick="showPage('page2')">Page 2</button>
-        <button onclick="showPage('page3')">Page 3</button>
-        <div id="page1"> This is Page 1</div>
+        <button data-page="page1">Page 1</button>
+        <button data-page="page2">Page 2</button>
+        <button data-page="page3">Page 3</button>
+        <br><br>
+        <div id="page1">This is Page 1</div>
         <div id="page2">This is Page 2</div>
         <div id="page3">This is Page 3</div>
         
