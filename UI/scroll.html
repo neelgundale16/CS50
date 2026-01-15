@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Scroll</title>
+    </head>
+
+    <body>
+    <script>
+
+        for (let i = 1; i <= 100; i++) {
+        const div = document.createElement("div");
+        div.textContent = `This is line number ${i}`;
+        document.body.appendChild(div);
+    }
+
+        window.onscroll = () => {
+            if(window.innerHeight + window.scrollY >= document.body.offsetHeight){
+                document.querySelector('body').style.background = 'lightblue';
+            }
+            else {
+                document.querySelector('body').style.background = 'white';
+            }
+        }
+     
+    </script>
+    </body>
+</html>
