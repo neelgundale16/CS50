@@ -9,16 +9,16 @@
     <body>
         <div id="app"></div>
         <script type="text/babel">
-            function Hello() {
-                return (<h1>Hello!</h1>);
+            function Hello(props) {
+                return (<h1>Hello, {props.name}!</h1>);
             }
             function App() {
               
                 return  (
                     <div>
-                        <Hello />
-                        <Hello />
-                        <Hello />
+                        <Hello name="Harry" />
+                        <Hello name="Sally" />
+                        <Hello name="Tommy" />
 
                     </div>
                 );
