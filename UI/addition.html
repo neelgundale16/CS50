@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <title>Addition Calculator</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            input {
+                width: 50px;
+                margin: 0 5px;
+            }
+            button {
+                margin-left: 10px;
+            }
+            div {
+                margin-top: 10px;
+                font-size: 1.2em;
+            }
+            #heading {
+                font-size: 2em;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body style="background-color: aquamarine;">
+        <div id="heading">Addition Calculator</div>
+        <div id="app"></div>
+        
+        <script type="text/babel">
+            
+            function App() {
+                const [num1, setNum1] = React.useState();
+                const [num2, setNum2] = React.useState();
+                const [sum, setSum] = React.useState();
+
+                function updateNum1(e) {
+                    setNum1(Number(e.target.value));
+                }
+
+                function updateNum2(e) {
+                    setNum2(Number(e.target.value));
+                }
+
+                function calculateSum() {
+                    setSum(num1 + num2);
+                }
+
+                function inputKeyPress(e) {
+                    if (e.key === 'Enter') {
+                        calculateSum();
+                    }
+                }
+                return (
+                    <div>
+                        <input type="number" value={num1} onChange={updateNum1} onKeyDown={inputKeyPress} />  
+                        +
+                        <input type="number" value={num2} onChange={updateNum2} onKeyDown={inputKeyPress} />
+                        <button onClick={calculateSum}>Add</button>
+                        <div>{sum}</div>
+                    </div>
+                );
+            }
+            ReactDOM.render(<App />, document.querySelector('#app'));
+
+        </script>
+    </body>
+</html>
