@@ -1,6 +1,5 @@
 import unittest
-
-from Testing.prime import is_prime
+from prime import is_prime
 
 class Tests(unittest.TestCase):
     def test_1(self):
@@ -13,7 +12,15 @@ class Tests(unittest.TestCase):
 
     def test_3(self):
         """Check that 3 is prime."""
-        self.assertTrue(is_prime(3))    
+        self.assertTrue(is_prime(3))   
+
+    def test_4(self):
+        """Check that 4 is not prime."""
+        self.assertFalse(is_prime(4)) 
+    
+    def test_17(self):
+        """Check that 17 is prime."""
+        self.assertTrue(is_prime(17))
 
 if __name__ == '__main__':
     unittest.main()
