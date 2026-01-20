@@ -1,2 +1,4 @@
 *.db
 flights.sql
+__pycache__/
+*.pyc
